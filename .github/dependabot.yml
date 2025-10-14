@@ -1,0 +1,95 @@
+# =============================================================================
+# DEPENDABOT CONFIGURATION
+# =============================================================================
+# Automatically checks for dependency updates and creates pull requests
+# https://docs.github.com/en/code-security/dependabot
+# =============================================================================
+
+version: 2
+
+updates:
+  # ---------------------------------------------------------------------------
+  # Python dependencies (pip)
+  # ---------------------------------------------------------------------------
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Sao_Paulo"
+
+    # Agrupación de actualizaciones
+    groups:
+      # Agrupar actualizaciones de testing
+      testing:
+        patterns:
+          - "pytest*"
+          - "coverage"
+
+      # Agrupar actualizaciones de linting/formatting
+      code-quality:
+        patterns:
+          - "black"
+          - "flake8"
+          - "isort"
+          - "mypy"
+          - "pylint"
+
+      # Agrupar actualizaciones de seguridad
+      security:
+        patterns:
+          - "bandit"
+          - "safety"
+
+      # Agrupar actualizaciones de LLM providers
+      llm-providers:
+        patterns:
+          - "anthropic"
+          - "openai"
+          - "google-*"
+
+    # Configuración de pull requests
+    open-pull-requests-limit: 10
+    pull-request-branch-name:
+      separator: "/"
+
+    # Etiquetas para PRs
+    labels:
+      - "dependencies"
+      - "python"
+
+    # Revisar solo actualizaciones de seguridad y parches
+    # (evitar actualizaciones mayores automáticas)
+    ignore:
+      # Ignorar actualizaciones mayores de anthropic (pueden tener breaking changes)
+      - dependency-name: "anthropic"
+        update-types: ["version-update:semver-major"]
+
+      # Ignorar actualizaciones mayores de openai
+      - dependency-name: "openai"
+        update-types: ["version-update:semver-major"]
+
+    # Configuración de commits
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # ---------------------------------------------------------------------------
+  # GitHub Actions dependencies
+  # ---------------------------------------------------------------------------
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Sao_Paulo"
+
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+    commit-message:
+      prefix: "ci"
+      include: "scope"
