@@ -1,0 +1,90 @@
+# === ARCHIVOS DE AMBIENTE ===
+.env
+.env.local
+.env.*.local
+.env.development
+.env.staging
+.env.production
+!.env.example
+
+# === CONFIGURACIÓN PRIVADA ===
+.mcp.json
+.mcp.json.local
+*.local.json
+*.secret.json
+
+# === CREDENCIALES ESPECÍFICAS ===
+docs/specs/APIs/**/.env
+docs/specs/APIs/**/credentials.json
+aquila_app/integrations/bureau_apis/bmp_keys/*.pem
+aquila_app/integrations/bureau_apis/bmp_keys/*.key
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# === TESTING ===
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# === LOGS Y TEMPORALES ===
+*.log
+*.json
+!**/schema.json
+!**/config.json
+!package.json
+!package-lock.json
+!tsconfig.json
+pip-log.txt
+pip-delete-this-directory.txt
+
+# === IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# === VIRTUAL ENVIRONMENTS ===
+venv/
+ENV/
+env/
+.venv
+
+# === JUPYTER ===
+.ipynb_checkpoints
+*.ipynb
+
+# === RESULTADOS DE TESTS ===
+test_results/
+*.test.json
+*_test_output.json
+
+# Excepciones: Mantener estos archivos JSON
+!requirements*.txt
+!pyproject.toml
