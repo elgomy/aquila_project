@@ -1,0 +1,54 @@
+# =============================================================================
+# AQUILA PROJECT - DEVELOPMENT DEPENDENCIES
+# =============================================================================
+# Instalar con: pip install -r requirements-dev.txt
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Testing & Coverage
+# -----------------------------------------------------------------------------
+pytest>=7.4.0                # Framework de testing
+pytest-asyncio>=0.21.0       # Support para tests async
+pytest-cov>=4.1.0            # Coverage de tests
+pytest-mock>=3.11.0          # Mocking en tests
+httpx>=0.24.0                # Cliente HTTP async para tests
+
+# -----------------------------------------------------------------------------
+# Code Quality & Formatting
+# -----------------------------------------------------------------------------
+black>=23.7.0                # Formatter automático (PEP 8)
+flake8>=6.1.0                # Linter (PEP 8 compliance)
+isort>=5.12.0                # Organizador de imports
+pylint>=2.17.0               # Análisis estático avanzado
+
+# -----------------------------------------------------------------------------
+# Type Checking
+# -----------------------------------------------------------------------------
+mypy>=1.5.0                  # Type checker estático
+types-PyYAML>=6.0.0          # Type stubs para PyYAML
+types-redis>=4.6.0           # Type stubs para Redis
+
+# -----------------------------------------------------------------------------
+# Pre-commit Hooks
+# -----------------------------------------------------------------------------
+pre-commit>=3.3.0            # Framework de pre-commit hooks
+
+# -----------------------------------------------------------------------------
+# Security Scanning
+# -----------------------------------------------------------------------------
+bandit>=1.7.5                # Security linter
+safety>=2.3.0                # Dependency vulnerability scanner
+
+# -----------------------------------------------------------------------------
+# Documentation (Opcional)
+# -----------------------------------------------------------------------------
+# sphinx>=7.1.0              # Documentation generator
+# sphinx-rtd-theme>=1.3.0    # ReadTheDocs theme
+# sphinx-autodoc-typehints   # Type hints in docs
+
+# -----------------------------------------------------------------------------
+# Development Utilities
+# -----------------------------------------------------------------------------
+ipython>=8.14.0              # Enhanced Python REPL
+ipdb>=0.13.13                # IPython debugger
+python-dotenv>=1.0.0         # Load .env files en desarrollo
