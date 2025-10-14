@@ -1,8 +1,12 @@
 # Aquila Credit System 🦅
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-Proprietary-red.svg)]()
-[![GitHub](https://img.shields.io/badge/GitHub-aquila__project-black.svg)](https://github.com/elgomy/aquila_project)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![GitHub Issues](https://img.shields.io/github/issues/elgomy/aquila_project)](https://github.com/elgomy/aquila_project/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/elgomy/aquila_project)](https://github.com/elgomy/aquila_project/stargazers)
+[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/elgomy/aquila_project/graphs/commit-activity)
 
 Sistema de análisis de crédito automatizado pionero que implementa una arquitectura híbrida única donde la IA actúa como orquestador coordinando herramientas determinísticas.
 
